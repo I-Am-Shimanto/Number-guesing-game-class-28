@@ -1,0 +1,74 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 70px;
+    margin-top: 50px;
+    border: 2px solid #210F37;
+}
+h1{
+    font-size: 48px;
+    font-weight: 600;
+    color: #FF2DF1;
+    margin: 0;
+}
+.player{
+    font-size: 36px;
+    font-weight: 600;
+    color: #E53888;
+    margin: 10px 0;
+}
+input{
+    width: 60%;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    border: 5px double #007074;
+    outline: none;
+    color: #E53888;
+    font-weight: 700;
+    /* background-color: black; */
+}
+::placeholder{
+    color: #003092;
+}
+button{
+    width: fit-content;
+    padding: 10px 40px;
+    font-size: 24px;
+    margin-top: 20px;
+    border: none;
+    background-color: #D69ADE;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+p{
+    font-size: 20px;
+    color: red;
+    font-weight: 700;
+    
+}
+.playerTwoInput , .playerThreeInput , .playerTwoBtn , .playerThreeBtn{
+    display: none;
+}
+
+.player1Win , .player2Win , .player3Win{
+    font-size: 50px;
+    color: red;
+}
+.result , .reset{
+    display: none;
+}
