@@ -24,7 +24,7 @@ playerOneBtn.addEventListener("click", () => {
     if (playerOneInput.value == "") {
         return error.innerHTML = "Please input a Number"
     }
-    if (playerOneInput.value > 11 || playerOneInput.value < 1) {
+    if (playerOneInput.value > 10 || playerOneInput.value < 1) {
         return error.innerHTML = "Please enter value between 1 to 10"
     }
     if (!(playerOneInput.value - 0)) {
@@ -47,7 +47,7 @@ playerTwoBtn.addEventListener("click", () => {
     if (playerTwoInput.value == "") {
         return error.innerHTML = "Please input a Number"
     }
-    if (playerTwoInput.value > 11 || playerTwoInput.value < 1) {
+    if (playerTwoInput.value > 10 || playerTwoInput.value < 1) {
         return error.innerHTML = "Please enter value between 1 to 10"
     }
     if (!(playerTwoInput.value - 0)) {
@@ -57,7 +57,6 @@ playerTwoBtn.addEventListener("click", () => {
         playerTwoChances.innerHTML = `Your chances left ${chances2}!`
 
         if (playerOneInput.value == playerTwoInput.value) {
-            // player.innerHTML = "Player Two Win"
             playerTwoChances.innerHTML = ""
             playerTwoInput.style = "display : none;"
             playerTwoBtn.style = "display : none;"
@@ -67,7 +66,6 @@ playerTwoBtn.addEventListener("click", () => {
         }
     } 
     else {
-        // player.innerHTML = "Player One Win"
         playerTwoChances.style = "display:none;"
         playerTwoInput.style = "display : none;"
         playerTwoBtn.style = "display : none;"
@@ -85,7 +83,7 @@ playerThreeBtn.addEventListener("click", () => {
     if (playerThreeInput.value == "") {
         return error.innerHTML = "Please input a Number"
     }
-    if (playerThreeInput.value > 11 || playerThreeInput.value < 1) {
+    if (playerThreeInput.value > 10 || playerThreeInput.value < 1) {
         return error.innerHTML = "Please enter value between 1 to 10"
     }
     if (!(playerThreeInput.value - 0)) {
@@ -144,6 +142,21 @@ result.addEventListener("click", () => {
     }
 })
 
+// ============= reset button 
 reset.addEventListener("click", () => {
     location.reload()
+})
+
+// ============= error message 
+
+playerOneInput.addEventListener("input", () => {
+    error.innerHTML = ""
+})
+
+playerTwoInput.addEventListener("input", () => {
+    error.innerHTML = ""
+})
+
+playerThreeInput.addEventListener("input", () => {
+    error.innerHTML = ""
 })
